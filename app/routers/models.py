@@ -9,13 +9,13 @@ def create_tables(conn, cur):
             id SERIAL PRIMARY KEY NOT NULL,
             email VARCHAR NOT NULL UNIQUE,
             password VARCHAR NOT NULL,
-            created_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT now()
+            created_on TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT now()
         )
     """)
 
     cur.execute("""
         CREATE TABLE IF NOT EXISTS posts (
-            id SERIAL PRIMARY KEY,
+            id SERIAL PRIMARY KEY NOT NULL,
             title VARCHAR(100),
             content VARCHAR(300),
             published BOOLEAN,
