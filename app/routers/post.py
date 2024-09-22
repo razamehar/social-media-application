@@ -1,8 +1,9 @@
 from fastapi import Response, status, HTTPException, APIRouter, Depends
-from app.database import get_db
-from app.schema import PostBase
+from database import get_db
+from schema import PostBase
 from typing import Tuple, Optional
-from app import oauth2
+from oauth2 import oauth2
+
 
 router = APIRouter(prefix='/posts', 
                    tags=['Posts'])
