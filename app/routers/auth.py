@@ -1,9 +1,9 @@
 from fastapi import Response, status, HTTPException, APIRouter, Depends
 from fastapi.security.oauth2 import OAuth2PasswordRequestForm
-from database import get_db
-from schema import UserLogin, Token
-from utils import verify
-from oauth2 import oauth2
+from app.database import get_db
+from app.schema import UserLogin, Token
+from app.utils import verify
+from app import oauth2
 from typing import Tuple
 
 router = APIRouter(prefix='/login', 

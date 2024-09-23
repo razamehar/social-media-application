@@ -1,7 +1,7 @@
 from fastapi import FastAPI
-from routers import post, user, auth, like
-from routers.models import create_tables
-from database import get_db, close_db
+from app.routers import post, user, auth, like
+from app.routers.models import create_tables
+from app.database import get_db, close_db
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
