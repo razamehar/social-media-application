@@ -34,4 +34,4 @@ app.include_router(like.router)
 
 @app.get("/")
 def root():
-    return {"message": "Hello world"}
+    return {"message": "Welcome to the Social Media app."}

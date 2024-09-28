@@ -1,7 +1,7 @@
 import psycopg
 import time
 from typing import Tuple
-from .config import settings
+from app.config import settings
 
 def get_db() -> Tuple:
     while True:
